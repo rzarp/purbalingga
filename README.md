@@ -54,7 +54,7 @@ Website ini memiliki 2 sisi pengguna yaitu administrator dan user. Berikut merup
 - Backend: [PHP v 7.4](https://www.php.net/downloads.php)
 - Framework PHP : Laravel [Laravel 7](https://laravel.com/docs/7.x/releases)
 - Dashboard template : [Admin Stisla](https://getstisla.com/)
-- Dashboard Index : [Admin Stisla](https://onepagelove.com/aria)
+- Dashboard Index : [Aria](https://onepagelove.com/aria)
 - Database : [mysql](https://www.mysql.com/)
 
 ## Preview Fitur
