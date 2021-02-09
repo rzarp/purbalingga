@@ -23,6 +23,7 @@ Route::get('/','DashboardController@dashboard')->name('index');
 Route::get('/index/vismis','DashboardController@vismis')->name('vismis');
 Route::get('/detail/berita/{id}','DashboardController@detail')->name('detail');
 Route::get('/detail/favorit/{id}','DashboardController@favdetail')->name('favdetail');
+Route::post('/contact/tambah','DashboardController@contact')->name('contact.store');
 
 
 // About
@@ -65,6 +66,12 @@ Route::get('/vismis/edit/{id}','VisiMisiController@edit')->name('vismis.edit');
 Route::put('/vismis/edit/{id}','VisiMisiController@update')->name('vismis.update');
 Route::delete('/vismis/hapus/{id}','VisiMisiController@destroy')->name('vismis.destroy');
 
+// contact
+Route::get('/contact/lihat','ContactController@lihatcontact')->name('lihat.contact');
+Route::delete('/contact/hapus/{id}','ContactController@destroy')->name('contact.destroy');
+Route::get('/contact/detail/{id}','ContactController@detail')->name('contact.detail');
+
+// auth
 Auth::routes();
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');

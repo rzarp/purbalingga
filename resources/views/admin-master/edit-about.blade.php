@@ -27,7 +27,7 @@
                   <div class="card-body">
                     <div class="form-group">
                       <label>Title</label>
-                      <input type="text" name="title" class="form-control" placeholder="Title" required value="{{ $about->title }}">
+                      <input type="text" name="title" class="form-control" placeholder="Title"  value="{{ $about->title }}" required>
                         @error('title')
                             <div class="text-danger">
                                 {{ $message }}
@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group">
                       <label>Url</label>
-                      <input type="text" name="url" class="form-control" placeholder="Url" required value="{{ $about->url }}">
+                      <input type="text" name="url" class="form-control" placeholder="Url" value="{{ $about->url }}" required>
                         @error('url')
                             <div class="text-danger">
                                 {{ $message }}

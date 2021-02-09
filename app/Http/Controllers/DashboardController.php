@@ -8,6 +8,7 @@ use App\Favorit;
 use App\Berita;
 use App\Kesenian;
 use App\VisiMisi;
+use App\Contact;
 use DB;
 
 
@@ -24,11 +25,13 @@ class DashboardController extends Controller
         $data['berita'] = Berita::all();
         $data['kesenian'] = Kesenian::all();
         $data['favorit'] = Favorit::all();
+
         return view('dashboard-master.dashboard',$data);
     }
 
     public function vismis() {
         $data['vismis'] = VisiMisi::all();
+        $data['about']  = About::all();
         return view('dashboard-master.vismis',$data);
     }
 
@@ -44,6 +47,22 @@ class DashboardController extends Controller
         $data['favorit'] = DB::select('select * from favorits where id = ?', [$id]);
         $data['about']  = About::all();
         return view('dashboard-master.favdetail',$data);
+    }
+
+    public function contact(Request $request) {
+        $request->validate ([
+            'name'      => 'required:contacts',
+            'email'     => 'required',
+            'message'   => ' ',
+        ]);
+
+        $contact = new Contact();
+        $contact->name      = $request->name;
+        $contact->email     = $request->email;
+        $contact->message   = $request->message;
+        $contact->save();
+
+        return redirect(route('index'))->with('pesan','Pesan Berhasil dikirim');
     }
     
     

@@ -29,6 +29,9 @@
                     <a class="nav-link page-scroll" href="#news">Berita</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link page-scroll" href="{{route('vismis')}}">Visi Dan Misi</a>
                 </li>
             </ul>

@@ -54,7 +54,7 @@ class BeritaController extends Controller
 
     public function update(Request $request, $id) 
     {
-         if($request->hasFile('gambar')) {
+        if($request->hasFile('gambar')) {
             $extFile = $request->gambar->getClientOriginalExtension();
             $namaFile = 'gambar-'.time().".".$extFile;
             $path = $request->gambar->move('img/berita', $namaFile);
@@ -64,10 +64,12 @@ class BeritaController extends Controller
                 'title' => $request->title,
                 'gambar' => $path,
                 'berita' => $request->berita,
+
+                
             ]);
-        
-           return redirect(route('lihat.berita'))->with('pesan','Data Berhasil diupdate');
-            }
+
+        return redirect(route('lihat.berita'))->with('pesan','Data Berhasil diupdate');
+        }
     }
 
     

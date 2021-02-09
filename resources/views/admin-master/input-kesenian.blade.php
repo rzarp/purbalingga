@@ -29,12 +29,13 @@
                       <input type="text" name="title" class="form-control" placeholder="Title" required>
                     </div>
                     <div class="form-group">
-                        <label>Favicon</label>
-                          <div class="custom-file">
-                            <input type="file" name="gambar" class="custom-file-input" id="site-favicon">
-                            <label class="custom-file-label">Choose File</label>
+                        <form>
+                          <div class="form-group">
+                            <label for="exampleFormControlFile1">Input Gambar</label>
+                            <input type="file" name="gambar" class="form-control-file" id="exampleFormControlFile1" required>
                           </div>
-                          <div class="form-text text-muted">The image must have a maximum size of 1MB</div>
+                        </form>
+                        <div class="form-text text-muted">The image must have a maximum size of 1MB</div>
                     </div>
                     <div class="form-group">
                       <label>Deskripsi</label>

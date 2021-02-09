@@ -62,20 +62,21 @@
                         @enderror
                     </div>
 
-                     <div class="form-group">
-                        <label>Gambar</label>
-                       
-                          <div class="custom-file">
-                            <input type="file" name="gambar" class="custom-file-input" id="site-favicon"  value="{{ $favorit->gambar }}">
-                            <label class="custom-file-label">Choose File</label>
+                      <div class="form-group">
+                        <form>
+                          <div class="form-group">
+                            <label for="exampleFormControlFile1">Input Gambar</label>
+                            <input type="file" name="gambar" class="form-control-file" id="exampleFormControlFile1"  value="{{ $favorit->gambar }}">
                           </div>
-                          <div class="form-text text-muted">The image must have a maximum size of 1MB</div>
+                        </form>
+                        <div class="form-text text-muted">The image must have a maximum size of 1MB</div>
                         @error('gambar')
                             <div class="text-danger">
                                 {{ $message }}
                             </div>
                         @enderror
-                      </div>
+                    </div>
+
                     <div class="form-group">
                         <button class="btn btn-danger" type="reset" value="Reset">Reset</button>
                         <button class="btn btn-primary" type="submit">Input</button>
